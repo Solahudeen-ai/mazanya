@@ -3,593 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIES Global Logistics | Custom Clearance & Freight</title>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
+    <title>AIES Global Logistics | Custom Clearing & Freight</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6', // Teal focus for modern logistics
-                            600: '#0d9488',
-                            800: '#115e59',
-                            900: '#022c22', // Deep Dark Green/Navy
-                            950: '#011c16',
-                        }
+                        brand: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 900: '#14532d' }
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom styles for hero background overlay */
+        /* Custom map background resembling the reference image */
         .hero-bg {
-            background-image: linear-gradient(rgba(2, 44, 34, 0.85), rgba(2, 44, 34, 0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .stats-bg {
-            background-image: linear-gradient(rgba(13, 148, 136, 0.9), rgba(2, 44, 34, 0.95)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 32px 32px;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 antialiased bg-gray-50 selection:bg-brand-500 selection:text-white">
+<body class="font-sans text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="bg-white/95 backdrop-blur-md shadow-sm fixed w-full z-50 top-0 transition-all duration-300 border-b border-gray-100">
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-800 text-white rounded-xl flex items-center justify-center font-bold text-2xl mr-3 shadow-lg shadow-brand-500/30">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">A</div>
                     <div class="flex flex-col">
-                        <span class="font-bold text-2xl text-brand-950 tracking-tight leading-none">AIES</span>
-                        <span class="text-xs font-semibold text-brand-600 tracking-widest uppercase mt-1">Global Logistics</span>
+                        <span class="font-extrabold text-xl leading-tight text-gray-900">AIES</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-widest">GLOBAL LOGISTICS</span>
                     </div>
                 </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#who-we-serve" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Who We Serve</a>
-                    <a href="#routing" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Shipping Routes</a>
-                    <a href="#services" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Our Services</a>
-                    <a href="#advantage" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">The Advantage</a>
-                    <a href="#footer" class="bg-brand-900 hover:bg-brand-800 text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
-                        Request Quote
-                    </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#routing" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Who We Serve</a>
+                    <a href="#routing" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Shipping Routes</a>
+                    <a href="#services" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Our Services</a>
+                    <a href="#advantage" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">The Advantage</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-3xl"></i>
-                    </button>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-brand-700 hover:bg-brand-800 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition shadow-lg shadow-brand-500/30">Get A Quote[cite: 4]</a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full left-0">
-            <div class="px-4 pt-4 pb-8 space-y-3">
-                <a href="#who-we-serve" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-lg">Who We Serve</a>
-                <a href="#routing" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-lg">Shipping Routes</a>
-                <a href="#services" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-lg">Our Services</a>
-                <a href="#advantage" class="block px-4 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-lg">The Advantage</a>
-                <a href="#footer" class="block px-4 py-4 mt-4 text-base font-bold text-white bg-brand-900 rounded-lg text-center shadow-md">Request Quote</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-[95vh] flex items-center pt-24 relative overflow-hidden">
-        <!-- Decorative glowing orb -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Text Content -->
-                <div class="lg:col-span-8 text-left">
-                    <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-brand-100 text-sm font-semibold tracking-wider mb-6 backdrop-blur-md">
-                        <span class="relative flex h-3 w-3">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
-                        </span>
-                        CEO-Led: 30 Years Customs Expertise
-                    </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
-                        Premier Licensed Clearing & <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-white">Freight Forwarding in Nigeria.</span>
-                    </h1>
-                    
-                    <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl font-light leading-relaxed mb-4">
-                        Increasing The Wealth Of Africa Through Global Logistics.
-                    </p>
-                    <p class="text-lg text-gray-400 max-w-2xl font-light mb-10">
-                        Everything you need to grow your import & export business. Efficient custom clearance, cargo delivery, and end-to-end logistics handled professionally and timely at major sea and air ports.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <a href="#footer" class="w-full sm:w-auto px-8 py-4 bg-brand-500 hover:bg-brand-400 text-white rounded-full font-bold text-lg shadow-[0_0_20px_rgba(20,184,166,0.4)] hover:shadow-[0_0_30px_rgba(20,184,166,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center">
-                            Request a Quote <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </a>
-                        <button class="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-full font-bold text-lg backdrop-blur-sm transition-all flex items-center justify-center">
-                            <i class="fa-solid fa-location-crosshairs mr-2 text-brand-400"></i> Track My Shipment
-                        </button>
-                    </div>
+    <!-- HERO SECTION (Inspired by Screenshot 3 light layout) -->
+    <section id="home" class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 hero-bg overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            
+            <div class="lg:w-3/5 lg:pr-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                    Increasing The Wealth Of Africa Through Global Logistics[cite: 4].
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Custom Licensed Clearing & Freight Forwarding Agent in Nigeria[cite: 3]. Everything you need to grow your import and export business. Efficient custom clearance, cargo delivery, and end-to-end logistics handled professionally and timely at major sea and air ports terminals[cite: 3].
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#routing" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3.5 rounded-full font-bold text-lg transition shadow-xl shadow-brand-500/20 text-center">
+                        Track My Shipment[cite: 4]
+                    </a>
+                    <a href="#services" class="bg-white border-2 border-gray-200 text-gray-800 hover:border-brand-600 hover:text-brand-600 px-8 py-3.5 rounded-full font-bold text-lg transition text-center">
+                        Explore Our Services
+                    </a>
                 </div>
-                
-                <!-- Right Trust Badge -->
-                <div class="hidden lg:flex lg:col-span-4 justify-end">
-                    <div class="relative w-72 h-72">
-                        <div class="absolute inset-0 bg-brand-600 rounded-full opacity-20 animate-pulse"></div>
-                        <div class="absolute inset-4 bg-brand-800 rounded-full flex flex-col items-center justify-center text-center p-8 border border-brand-500/30 shadow-2xl backdrop-blur-xl">
-                            <i class="fa-solid fa-shield-halved text-5xl text-brand-400 mb-3"></i>
-                            <h3 class="text-4xl font-extrabold text-white mb-1">30 <span class="text-xl">Years</span></h3>
-                            <p class="text-brand-100 font-medium text-sm">Of Specialized Insider Customs Experience</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
+            <div class="lg:w-2/5 mt-16 lg:mt-0 relative flex justify-center">
+                <!-- 30 Years Badge (From User's Custom Requirement / Screenshot 2) -->
+                <div class="relative w-64 h-64 bg-brand-900 rounded-full flex flex-col items-center justify-center text-white shadow-2xl border-8 border-white z-10">
+                    <svg class="w-12 h-12 text-brand-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <div class="text-5xl font-extrabold mb-1">30 <span class="text-2xl">Years</span></div>
+                    <div class="text-sm font-medium text-brand-100 text-center px-4">Of Specialized Insider Customs Experience</div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute w-72 h-72 bg-brand-100 rounded-full -z-10 -right-4 -bottom-4 animate-pulse"></div>
             </div>
         </div>
     </section>
 
-    <!-- Who We Serve Section -->
-    <section id="who-we-serve" class="py-24 bg-white relative">
+    <!-- ROUTING SECTION (Inspired by Screenshot 3 Cards) -->
+    <section id="routing" class="py-20 bg-white relative -mt-16 z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">Targeted Solutions</h2>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Who We Serve</h3>
-                <p class="text-xl text-gray-600 leading-relaxed">
-                    Our services are tailored to first-time importers, established businesses, entrepreneurs, and end-users seeking a smooth, stress-free logistics experience.
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-2">Where Are You Shipping From[cite: 4]</h2>
+                <h3 class="text-3xl font-bold text-gray-900">Choose your route to get started[cite: 4]</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- China to Nigeria Card -->
+                <div class="bg-white border border-gray-100 rounded-2xl shadow-xl p-8 text-center hover:-translate-y-1 transition duration-300">
+                    <div class="flex justify-center items-center gap-4 mb-6">
+                        <span class="text-4xl">🇨🇳</span>
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        <span class="text-4xl">🇳🇬</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-6">CHINA TO NIGERIA[cite: 4]</h4>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition">
+                            ✈️ Air Freight[cite: 4]
+                        </button>
+                        <button class="bg-brand-900 hover:bg-brand-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition">
+                            🚢 Sea Freight[cite: 4]
+                        </button>
+                    </div>
+                </div>
+
+                <!-- USA to Nigeria Card -->
+                <div class="bg-white border border-gray-100 rounded-2xl shadow-xl p-8 text-center hover:-translate-y-1 transition duration-300">
+                    <div class="flex justify-center items-center gap-4 mb-6">
+                        <span class="text-4xl">🇺🇸</span>
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        <span class="text-4xl">🇳🇬</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-6">USA TO NIGERIA[cite: 4]</h4>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition">
+                            ✈️ Air Freight[cite: 4]
+                        </button>
+                        <button class="bg-brand-900 hover:bg-brand-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition">
+                            🚢 Sea Freight[cite: 4]
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nigeria to World Card -->
+                <div class="bg-white border border-gray-100 rounded-2xl shadow-xl p-8 text-center hover:-translate-y-1 transition duration-300">
+                    <div class="flex justify-center items-center gap-4 mb-6">
+                        <span class="text-4xl">🇳🇬</span>
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        <span class="text-4xl">🌍</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-gray-900 mb-6">NIGERIA TO THE WORLD[cite: 4]</h4>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-lg w-full text-sm font-bold flex items-center justify-center gap-2 transition">
+                            ✈️ Air Freight[cite: 4]
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Who We Serve Banner -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                <h4 class="text-xl font-bold text-gray-900 mb-4 text-center">Who We Serve</h4>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto">
+                    Our services are tailored to first-time importers, businesses, entrepreneurs, and end users seeking a smooth and stress-free logistics experience[cite: 3]. Whether you are a manufacturer needing industrial equipment, or an SME exploring global markets, our specialized customs experience ensures your cargo moves without delay.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-600 font-bold tracking-wide uppercase mb-2">Our Core Services[cite: 3]</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">End-to-End Global Logistics</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">We are focused on sectors that will boost the African economy and help businesses scale to the international market[cite: 4].</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Audience 1 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-600 text-xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-store"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Importers & Wholesalers</h4>
-                    <p class="text-gray-600">Facilitating the smooth entry of commercial cargo, vehicles, and general consumer market goods.</p>
-                </div>
-
-                <!-- Audience 2 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-600 text-xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-industry"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Manufacturers & Factories</h4>
-                    <p class="text-gray-600">Clearing heavy industrial equipment, raw materials, general chemicals, and agricultural machinery.</p>
-                </div>
-
-                <!-- Audience 3 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-600 text-xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-earth-africa"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Export & Commodity Traders</h4>
-                    <p class="text-gray-600">Managing vital documentation and freight for local goods moving to international markets.</p>
-                </div>
-                
-                <!-- Audience 4 -->
-                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 hover:shadow-xl transition-all duration-300 group lg:col-span-1 md:col-span-2">
-                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-600 text-xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-ship"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Shipping & Logistics Businesses</h4>
-                    <p class="text-gray-600">Acting as a reliable, custom-licensed local partner for port handling and nationwide haulage.</p>
-                </div>
-
-                <!-- Audience 5 -->
-                <div class="bg-brand-900 rounded-2xl p-8 shadow-xl text-white group lg:col-span-2 md:col-span-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-600 rounded-full blur-[80px] opacity-50 -mr-20 -mt-20"></div>
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-300 text-xl mb-6 backdrop-blur-sm">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold text-white mb-3">Small & Medium-Sized Enterprises</h4>
-                        <p class="text-brand-100 text-lg mb-6 max-w-xl">Providing stress-free, end-to-end supply chain support designed specifically to help entrepreneurs scale rapidly without borders.</p>
-                        <a href="#footer" class="inline-flex items-center text-brand-300 hover:text-white font-semibold transition-colors">
-                            Grow your business with us <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Routing Section (Get Started) -->
-    <section id="routing" class="py-20 bg-brand-50 relative z-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-brand-950 mb-4">Where Are You Shipping From?</h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Choose your route to get started with our optimized logistics network connecting major global hubs to Nigeria.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-                <!-- Route Card 1: China -->
-                <div class="bg-white rounded-3xl p-8 border-2 border-transparent hover:border-brand-500 hover:shadow-2xl transition-all duration-300 flex flex-col items-center">
-                    <div class="w-24 h-24 bg-gray-50 rounded-full shadow-inner flex items-center justify-center mb-6 overflow-hidden border border-gray-100">
-                        <img src="https://flagcdn.com/w160/cn.png" alt="China Flag" class="w-16 h-auto object-cover rounded-sm">
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">China to Nigeria</h3>
-                    <p class="text-gray-500 text-sm mb-6 text-center h-10">Express (3-5 days) or affordable Cargo (5-10 days). Fully insured.</p>
-                    
-                    <div class="flex flex-col w-full gap-3 mt-auto">
-                        <button class="w-full bg-brand-50 text-brand-700 hover:bg-brand-500 hover:text-white py-3.5 rounded-xl font-bold shadow-sm transition-all flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-plane-departure"></i> Air Freight
-                        </button>
-                        <button class="w-full bg-white border-2 border-gray-100 text-gray-700 hover:border-brand-500 hover:text-brand-600 py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-ship"></i> Sea Freight (40-45 Days)
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Route Card 2: USA -->
-                <div class="bg-white rounded-3xl p-8 border-2 border-transparent hover:border-brand-500 hover:shadow-2xl transition-all duration-300 flex flex-col items-center">
-                    <div class="w-24 h-24 bg-gray-50 rounded-full shadow-inner flex items-center justify-center mb-6 overflow-hidden border border-gray-100">
-                        <img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="w-16 h-auto object-cover rounded-sm">
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">USA to Nigeria</h3>
-                    <p class="text-gray-500 text-sm mb-6 text-center h-10">Shop any US store. Secure handling, customs support included.</p>
-                    
-                    <div class="flex flex-col w-full gap-3 mt-auto">
-                        <button class="w-full bg-brand-50 text-brand-700 hover:bg-brand-500 hover:text-white py-3.5 rounded-xl font-bold shadow-sm transition-all flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-plane-departure"></i> Air Freight
-                        </button>
-                        <button class="w-full bg-white border-2 border-gray-100 text-gray-700 hover:border-brand-500 hover:text-brand-600 py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-ship"></i> Sea Freight (6-8 Weeks)
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Action Links -->
-            <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-                <span class="text-gray-500 font-medium w-full block mb-2">I want to ship something else:</span>
-                <a href="#services" class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-full hover:shadow-md hover:border-brand-300 hover:text-brand-600 font-medium transition-all text-sm">
-                    <i class="fa-solid fa-box-open mr-2"></i> RoRo/Containerized Vehicles
-                </a>
-                <a href="#services" class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-full hover:shadow-md hover:border-brand-300 hover:text-brand-600 font-medium transition-all text-sm">
-                    <i class="fa-solid fa-tractor mr-2"></i> Industrial & Agric Machinery
-                </a>
-                <a href="#services" class="px-5 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-full hover:shadow-md hover:border-brand-300 hover:text-brand-600 font-medium transition-all text-sm">
-                    <i class="fa-solid fa-passport mr-2"></i> Export Documents Out of Nigeria
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Services Section -->
-    <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <div class="max-w-2xl">
-                    <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">Comprehensive Logistics</h2>
-                    <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Our Core Services</h3>
-                    <p class="text-xl text-gray-600">
-                        End-to-end operational capacity. We handle both the international transport and the complex local clearance securely.
-                    </p>
-                </div>
-                <a href="#footer" class="hidden md:inline-flex items-center text-brand-600 font-bold hover:text-brand-800 transition-colors pb-1 border-b-2 border-brand-200 hover:border-brand-600">
-                    Request custom service <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Service 1 -->
-                <div class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 hover:shadow-2xl hover:border-brand-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-file-signature"></i>
-                        </div>
-                        <span class="text-gray-300 text-5xl font-extrabold opacity-50 group-hover:text-brand-100 transition-colors">01</span>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Expert Imports Clearing</h4>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        We simplify the importation of goods from all over the world at competitive prices. Leveraging our CEO's 30 years of insider customs knowledge, we ensure professional, timely clearance of containerized goods, mechanical parts, and personal effects without unnecessary demurrage.
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Expert Imports Clearing[cite: 3]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We help with the importation of goods from all over the world at competitive prices[cite: 3]. Specializing in RoRo/Containerized vehicles, industrial equipments, and general market items[cite: 3], leveraging 30 years of insider knowledge to avoid demurrage.
                     </p>
                 </div>
-
                 <!-- Service 2 -->
-                <div class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 hover:shadow-2xl hover:border-brand-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-earth-americas"></i>
-                        </div>
-                        <span class="text-gray-300 text-5xl font-extrabold opacity-50 group-hover:text-brand-100 transition-colors">02</span>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Global Ocean & Air Shipping</h4>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        High-volume secure ocean shipments and fast air cargo delivery direct from hubs in China and the USA to your Nigerian doorstep. Every shipment is fully insured, providing you with absolute peace of mind.
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Ocean & Air Shipping[cite: 4]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        High volume, low cost, speedy ocean shipments and fast air cargo delivery[cite: 4]. We handle everything from bulky commercial cargo to essential documents, delivering to Nigerian doorsteps from the US, China, and globally[cite: 4].
                     </p>
                 </div>
-
                 <!-- Service 3 -->
-                <div class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 hover:shadow-2xl hover:border-brand-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-truck-moving"></i>
-                        </div>
-                        <span class="text-gray-300 text-5xl font-extrabold opacity-50 group-hover:text-brand-100 transition-colors">03</span>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
                     </div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Haulage & Warehousing</h4>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        We don't just clear it; we deliver it. Get trusted recommendations for nationwide haulage (from Lagos to Aba, Asaba, Kano, and beyond) and safe, secure warehousing for your imported cargo.
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Haulage and Warehousing[cite: 3]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We offer good recommendations for haulages across the nation and safe warehousing for your goods and cargo[cite: 3]. Our wide coverage shows our commitment to serving local businesses across Nigeria[cite: 4].
                     </p>
                 </div>
-
                 <!-- Service 4 -->
-                <div class="group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 hover:shadow-2xl hover:border-brand-100 transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        </div>
-                        <span class="text-gray-300 text-5xl font-extrabold opacity-50 group-hover:text-brand-100 transition-colors">04</span>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     </div>
-                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Export Docs & Procurement</h4>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Need to source without traveling? We offer item and auto procurement from China and the US (saving up to 50% on cars). We also handle company registration and FDA/Export Documentation to get your goods to global markets.
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Export & Documentation[cite: 4]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get your goods to anywhere in the world[cite: 3]. We assist with registering your export business, obtaining required FDA/Export licenses and documentation, so you can export confidently without unnecessary delays[cite: 4].
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Procurement & Sourcing[cite: 4]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Source verified products and vehicles from China and the USA without travelling[cite: 4]. We verify suppliers, inspect purchases, and ship safely to Nigeria, saving you up to 50% on personal or business car purchases[cite: 4].
+                    </p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">API & E-Commerce[cite: 4]</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our simple API plug-in powers your global logistics business, allowing you to book, create and track shipments right from your own platform or e-commerce store[cite: 4].
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Advantage Section (Why Choose Us & Stats) -->
-    <section id="advantage" class="py-24 stats-bg relative text-white">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-brand-950/80 backdrop-blur-sm"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Stats Banner -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-20 border-b border-white/20 mb-20 text-center">
-                <div>
-                    <h4 class="text-5xl md:text-6xl font-extrabold text-brand-400 mb-2">15+</h4>
-                    <p class="text-xl font-medium tracking-wide">Years Ops Experience</p>
-                </div>
-                <div>
-                    <h4 class="text-5xl md:text-6xl font-extrabold text-brand-400 mb-2">150k+</h4>
-                    <p class="text-xl font-medium tracking-wide">Customers Served</p>
-                </div>
-                <div>
-                    <h4 class="text-5xl md:text-6xl font-extrabold text-brand-400 mb-2">3M+</h4>
-                    <p class="text-xl font-medium tracking-wide">Items Shipped Globally</p>
-                </div>
-            </div>
-
-            <!-- Why Choose Us Content -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6">The AIES Advantage</h2>
-                <p class="text-xl text-brand-100 leading-relaxed">
-                    We combine our CEO's unmatched customs expertise with robust global infrastructure to guarantee security, speed, and reliability.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all">
-                    <div class="w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
-                        <i class="fa-solid fa-chess-knight"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">The Leadership Advantage</h4>
-                    <p class="text-brand-100 text-sm leading-relaxed">Operated under a CEO with 30 years of specialized customs experience, we navigate regulations perfectly so you avoid unnecessary charges and delays.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all">
-                    <div class="w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">24/7 Support & Tracking</h4>
-                    <p class="text-brand-100 text-sm leading-relaxed">Get real-time updates on customs clearing policies and live tracking from dispatch to final delivery, supported by our round-the-clock team.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all">
-                    <div class="w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">Security & Fast Delivery</h4>
-                    <p class="text-brand-100 text-sm leading-relaxed">Payments and goods are handled securely to prevent scams or damage. We utilize trusted haulage partners to consistently meet your deadlines.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all">
-                    <div class="w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
-                        <i class="fa-solid fa-shield-check"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">Fully Insured</h4>
-                    <p class="text-brand-100 text-sm leading-relaxed">Peace of mind is priceless. Every shipment is fully insured by one of the biggest and most reputable insurance companies in Nigeria.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="footer" class="bg-brand-950 text-white pt-24 pb-12 border-t-4 border-brand-500">
+    <!-- THE ADVANTAGE / WHY CHOOSE US -->
+    <section id="advantage" class="py-20 bg-brand-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-                
-                <!-- Brand Info (Col span 4) -->
-                <div class="lg:col-span-4">
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded flex items-center justify-center font-bold text-xl mr-3 shadow-lg">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="font-bold text-2xl tracking-tight leading-none text-white">AIES</span>
-                            <span class="text-[10px] font-semibold text-brand-400 tracking-widest uppercase mt-1">Global Logistics</span>
-                        </div>
-                    </div>
-                    <p class="text-brand-100 leading-relaxed mb-6 text-sm">
-                        Your trusted partner for shipping, sourcing, and business solutions between Africa, China, the USA, and the world. Over 30 locations nationwide to serve local businesses.
+            <div class="lg:flex lg:justify-between lg:items-center mb-16">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h2 class="text-brand-400 font-bold tracking-wide uppercase mb-2">Why Choose Us[cite: 3]</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Reliable Shipping & Clearing Solutions[cite: 3]</h3>
+                    <p class="text-brand-100 text-lg max-w-xl">
+                        With over a decade of industry experience[cite: 3] and an executive leadership team bringing 30 years of specialized customs knowledge, we ensure your goods cross borders smoothly. Peace of mind is priceless[cite: 4].
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-300 hover:bg-brand-500 hover:text-white transition-colors">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-300 hover:bg-brand-500 hover:text-white transition-colors">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-300 hover:bg-brand-500 hover:text-white transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-300 hover:bg-brand-500 hover:text-white transition-colors">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </div>
                 </div>
-
-                <!-- Locations (Col span 3) -->
-                <div class="lg:col-span-3">
-                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider text-sm">Global Locations</h4>
-                    
-                    <div class="mb-6">
-                        <h5 class="text-brand-400 font-semibold mb-2 flex items-center"><i class="fa-solid fa-location-dot mr-2 w-4"></i> Nigeria HQ</h5>
-                        <p class="text-brand-100 text-sm leading-relaxed pl-6">
-                            Plot 25, Uzman Plaza Warehouse B/stop by AccessBank, Coconut-Tincan,<br>
-                            Oshodi-Apapa Expressway, Lagos.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <h5 class="text-brand-400 font-semibold mb-2 flex items-center"><i class="fa-solid fa-location-dot mr-2 w-4"></i> China Warehouse</h5>
-                        <p class="text-brand-100 text-sm leading-relaxed pl-6">
-                            City Star Logistics Park, Dabu Heng 2nd Road, Dabu Village, Lishui Town,<br>
-                            Nanhai District, Foshan City, Guangdong Province.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Contact & Hours (Col span 3) -->
-                <div class="lg:col-span-3">
-                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider text-sm">Contact Us</h4>
+                <!-- Stats Box -->
+                <div class="lg:w-5/12 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <h4 class="text-xl font-bold mb-6 border-b border-white/20 pb-4">Delivering What Matters[cite: 4]</h4>
                     <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-clock text-brand-500 mt-1 mr-3 w-4"></i>
-                            <div>
-                                <span class="block text-white font-medium text-sm">Working Hours</span>
-                                <span class="text-brand-200 text-sm">9:00 AM - 5:00 PM (Mon-Fri)</span>
-                            </div>
+                        <li class="flex items-center gap-4">
+                            <span class="text-3xl font-extrabold text-brand-400">15+</span>
+                            <span class="text-brand-100 font-medium">Years Import & Export Experience[cite: 4]</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-phone text-brand-500 mt-1 mr-3 w-4"></i>
-                            <div>
-                                <span class="block text-white font-medium text-sm">Phone Support</span>
-                                <a href="tel:+2347008007000" class="text-brand-200 text-sm hover:text-white transition-colors block">+234 700 800 7000</a>
-                                <a href="tel:+16787202672" class="text-brand-200 text-sm hover:text-white transition-colors block">+1 678 720 2672</a>
-                            </div>
+                        <li class="flex items-center gap-4">
+                            <span class="text-3xl font-extrabold text-brand-400">150k+</span>
+                            <span class="text-brand-100 font-medium">Customers Served[cite: 4]</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fa-brands fa-whatsapp text-brand-500 mt-1 mr-3 w-4 text-lg"></i>
-                            <div>
-                                <span class="block text-white font-medium text-sm">WhatsApp Chat</span>
-                                <a href="https://wa.me/2347048806453" target="_blank" class="text-brand-200 text-sm hover:text-white transition-colors underline decoration-brand-500/50 underline-offset-4">+234 704 8806 453</a>
-                            </div>
+                        <li class="flex items-center gap-4">
+                            <span class="text-3xl font-extrabold text-brand-400">3M+</span>
+                            <span class="text-brand-100 font-medium">Items Shipped Globally[cite: 4]</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-envelope text-brand-500 mt-1 mr-3 w-4"></i>
-                            <div>
-                                <span class="block text-white font-medium text-sm">Email Us</span>
-                                <a href="mailto:reachus@africanies.com" class="text-brand-200 text-sm hover:text-white transition-colors">reachus@africanies.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Quick Links (Col span 2) -->
-                <div class="lg:col-span-2">
-                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider text-sm">Resources</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-brand-200 text-sm hover:text-brand-400 transition-colors flex items-center">Help Center / FAQ</a></li>
-                        <li><a href="#" class="text-brand-200 text-sm hover:text-brand-400 transition-colors flex items-center">Track Shipment</a></li>
-                        <li><a href="#" class="text-brand-200 text-sm hover:text-brand-400 transition-colors flex items-center">Prohibited Items</a></li>
-                        <li><a href="#" class="text-brand-200 text-sm hover:text-brand-400 transition-colors flex items-center">Terms and Conditions</a></li>
-                        <li><a href="#" class="text-brand-200 text-sm hover:text-brand-400 transition-colors flex items-center">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-                <p class="text-brand-300 mb-4 md:mb-0">
-                    &copy; 2026 AIES Global Logistics. All rights reserved.
-                </p>
-                <div class="flex items-center space-x-2 text-brand-300">
-                    <i class="fa-solid fa-shield-halved text-brand-500"></i>
-                    <span>Licensed & Verified Agent</span>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        24/7 Hours Support[cite: 3]
+                    </h5>
+                    <p class="text-brand-100 text-sm leading-relaxed">We understand the needs to be credible in our dealings coupled with timely delivery and regulated but reasonable clearing charges![cite: 3]</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Fast & Efficient Delivery[cite: 3]
+                    </h5>
+                    <p class="text-brand-100 text-sm leading-relaxed">With our trusted and experienced logistics and haulage partners, we prioritize fast and efficient delivery to meet our clients’ deadlines[cite: 3].</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Secure & Insured[cite: 3, 4]
+                    </h5>
+                    <p class="text-brand-100 text-sm leading-relaxed">Payments and goods are carried in a secure manner[cite: 3]. Every shipment is insured by one of the biggest insurance companies in Nigeria[cite: 4].</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        Real-Time Tracking[cite: 3]
+                    </h5>
+                    <p class="text-brand-100 text-sm leading-relaxed">Get timely and reliable updates on customs clearing policies and real-time information about your shipment from dispatch to final delivery[cite: 3].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand & Hours -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">A</div>
+                        <span class="font-extrabold text-xl text-white tracking-tight">AIES GLOBAL</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Your trusted partner for shipping, sourcing and business solutions between Africa, China and the world[cite: 4].
+                    </p>
+                    <div>
+                        <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-2">Work Hours[cite: 4]</h6>
+                        <p class="text-sm text-gray-400">9am - 5pm (Mon-Fri)[cite: 4]</p>
+                    </div>
+                </div>
+
+                <!-- Locations -->
+                <div>
+                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Our Locations</h6>
+                    <ul class="space-y-6">
+                        <li>
+                            <strong class="text-white text-sm block mb-1">Nigeria HQ[cite: 3]</strong>
+                            <span class="text-sm text-gray-400 leading-relaxed block">Plot 25, Uzman Plaza Warehouse B/stop by AccessBank, Coconut-Tincan, Oshodi-Apapa Expressway, Lagos[cite: 3].</span>
+                        </li>
+                        <li>
+                            <strong class="text-white text-sm block mb-1">China Office[cite: 4]</strong>
+                            <span class="text-sm text-gray-400 leading-relaxed block">City Star Logistics Park, Dabu Heng 2nd Road, Dabu Village, Lishui Town, Nanhai District, Foshan City, Guangdong Province, P.R.China[cite: 4].</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Contact Us[cite: 4]</h6>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:reachus@africanies.com" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
+                                ✉️ reachus@africanies.com[cite: 4]
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+2348070757689" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
+                                📞 +234 807 0757 689[cite: 3]
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+16787202672" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
+                                📞 +1 678 720 2672[cite: 4]
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=2348070757689" class="text-sm text-brand-500 font-semibold hover:text-brand-400 transition flex items-center gap-2 mt-2">
+                                💬 Chat with us on WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Quick Links[cite: 3]</h6>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">About Us[cite: 3, 4]</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Track Shipment[cite: 4]</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Help Center & FAQ[cite: 3, 4]</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Terms And Conditions[cite: 4]</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Privacy Policy[cite: 4]</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">List of Prohibited Items[cite: 4]</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">&copy; 2026 AIES Global Logistics. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <span class="text-sm text-gray-500">Licensed Custom Clearing Agent</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-
-            // Toggle Mobile Menu
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                // Change icon
-                const icon = btn.querySelector('i');
-                if (menu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                }
-            });
-
-            // Close Mobile Menu on link click
-            const mobileLinks = menu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                    const icon = btn.querySelector('i');
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                });
-            });
-
-            // Navbar shadow and blur adjustment on scroll
-            const nav = document.querySelector('nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    nav.classList.add('shadow-md', 'bg-white/95');
-                    nav.classList.remove('bg-transparent', 'border-transparent');
-                } else {
-                    nav.classList.remove('shadow-md');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
