@@ -74,11 +74,13 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <!-- Changed background to a subtle white-blue gradient -->
-    <section id="home" class="relative pt-20 md:pt-32 pb-24 lg:pb-32 overflow-hidden bg-gradient-to-br from-white via-blue-50 to-white">
+    <section id="home" class="relative pt-20 md:pt-32 pb-24 lg:pb-32 overflow-hidden bg-white">
         
-        <!-- Faint Map Background -->
-        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
+        <!-- Faint Whitish Map Background -->
+        <div class="absolute inset-0 z-0 opacity-20 grayscale pointer-events-none" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
+        
+        <!-- White overlay to wash out the map and make it very faint -->
+        <div class="absolute inset-0 z-0 bg-white/80 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
@@ -297,88 +299,3 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 pt-20 pb-10 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Brand & Hours -->
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">A</div>
-                        <span class="font-extrabold text-xl text-white tracking-tight">AIES GLOBAL</span>
-                    </div>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
-                        Your trusted partner for shipping, sourcing and business solutions between Africa, China and the world.
-                    </p>
-                    <div>
-                        <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-2">Work Hours</h6>
-                        <p class="text-sm text-gray-400">9am - 5pm (Mon-Fri)</p>
-                    </div>
-                </div>
-
-                <!-- Locations -->
-                <div>
-                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Our Locations</h6>
-                    <ul class="space-y-6">
-                        <li>
-                            <strong class="text-white text-sm block mb-1">Nigeria HQ</strong>
-                            <span class="text-sm text-gray-400 leading-relaxed block">Plot 25, Uzman Plaza Warehouse B/stop by AccessBank, Coconut-Tincan, Oshodi-Apapa Expressway, Lagos.</span>
-                        </li>
-                        <li>
-                            <strong class="text-white text-sm block mb-1">China Office</strong>
-                            <span class="text-sm text-gray-400 leading-relaxed block">City Star Logistics Park, Dabu Heng 2nd Road, Dabu Village, Lishui Town, Nanhai District, Foshan City, Guangdong Province, P.R.China.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Contact Us</h6>
-                    <ul class="space-y-4">
-                        <li>
-                            <a href="mailto:reachus@africanies.com" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
-                                ✉️ reachus@africanies.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+2348070757689" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
-                                📞 +234 807 0757 689
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+16787202672" class="text-sm text-gray-400 hover:text-brand-500 transition flex items-center gap-2">
-                                📞 +1 678 720 2672
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://api.whatsapp.com/send?phone=2348070757689" class="text-sm text-brand-500 font-semibold hover:text-brand-400 transition flex items-center gap-2 mt-2">
-                                💬 Chat with us on WhatsApp
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Links -->
-                <div>
-                    <h6 class="text-white font-bold uppercase tracking-wider text-xs mb-6">Quick Links</h6>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">About Us</a></li>
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Track Shipment</a></li>
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Help Center & FAQ</a></li>
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Terms And Conditions</a></li>
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-sm text-gray-400 hover:text-brand-500 transition">List of Prohibited Items</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pt-8 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-gray-500">&copy; 2026 AIES Global Logistics. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <span class="text-sm text-gray-500">Licensed Custom Clearing Agent</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
