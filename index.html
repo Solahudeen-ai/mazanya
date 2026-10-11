@@ -104,43 +104,77 @@
 
                 <!-- Right: Image Slider -->
                 <div class="w-[45%] md:w-1/2 relative h-40 sm:h-64 md:h-96 flex justify-center items-center">
+                    
                     <!-- HERO SLIDER IMAGES -->
+                    <!-- Image 1: Nigeria to World -->
                     <img src="IMG_5584.png" class="hero-slide drop-shadow-xl" alt="Nigeria to World Map Pin">
+                    
+                    <!-- Image 2: Nigeria to China -->
                     <img src="IMG_5586.png" class="hero-slide drop-shadow-xl" alt="Nigeria to China Map Pin">
+                    
+                    <!-- Image 3: Delivery Man / Logistics -->
                     <img src="IMG_5590.png" class="hero-slide drop-shadow-xl" alt="Logistics Delivery Man">
+                        
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ROUTING SECTION (Custom Designed Image Cards) -->
-    <section class="relative z-20 -mt-16 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="bg-white/95 backdrop-blur-md rounded-t-3xl md:rounded-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] pt-10 pb-8 border border-gray-100">
+    <!-- ROUTING SECTION (Overlapping Cards) -->
+    <section class="relative z-20 -mt-16 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-white rounded-t-3xl md:rounded-3xl shadow-sm pt-10 pb-4">
             
             <div class="text-center mb-8">
-                <h2 class="text-base md:text-lg font-extrabold text-gray-900 tracking-widest uppercase mb-1">WHERE ARE YOU SHIPPING FROM</h2>
-                <h3 class="text-gray-500 font-serif italic text-sm md:text-base">Choose your route to get started</h3>
+                <h2 class="text-base md:text-xl font-extrabold text-gray-900 tracking-wider uppercase mb-1">WHERE ARE YOU SHIPPING FROM</h2>
+                <h3 class="text-gray-600 font-serif italic text-sm md:text-base">Choose your route to get started</h3>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 px-4 md:px-12 lg:px-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
                 
-                <!-- Card 1: Nigeria to the World Image -->
-                <a href="#" class="block bg-white border border-gray-100 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 overflow-hidden group">
-                    <!-- Replace 'nigeria-to-world.png' with your actual image file -->
-                    <img src="nigeria-to-world.png" alt="Nigeria to the World" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500">
-                </a>
+                <!-- China to Nigeria Card Image -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 p-5 flex flex-col">
+                    <div class="flex-grow flex items-center justify-center mb-6">
+                        <img src="0 (2).png" alt="China to Nigeria Route" class="w-full h-auto max-h-40 object-contain rounded-xl">
+                    </div>
+                    <!-- Buttons Container -->
+                    <div class="flex flex-row gap-2 justify-center mt-auto w-full">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-2 py-2 rounded text-xs sm:text-sm font-bold flex items-center justify-center gap-1 w-1/2 transition">
+                            ✈️ Air Freight
+                        </button>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-2 py-2 rounded text-xs sm:text-sm font-bold flex items-center justify-center gap-1 w-1/2 transition">
+                            🚢 Sea Freight
+                        </button>
+                    </div>
+                </div>
 
-                <!-- Card 2: Clearing & Forwarding Image (Middle) -->
-                <a href="#" class="block bg-white border border-gray-100 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 overflow-hidden group">
-                    <!-- Replace 'clearing-forwarding.png' with your actual image file -->
-                    <img src="clearing-forwarding.png" alt="Clearing and Forwarding" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500">
-                </a>
+                <!-- USA to Nigeria Card Image -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 p-5 flex flex-col">
+                    <div class="flex-grow flex items-center justify-center mb-6">
+                        <img src="01.png" alt="USA to Nigeria Route" class="w-full h-auto max-h-40 object-contain rounded-xl">
+                    </div>
+                    <!-- Buttons Container -->
+                    <div class="flex flex-row gap-2 justify-center mt-auto w-full">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-2 py-2 rounded text-xs sm:text-sm font-bold flex items-center justify-center gap-1 w-1/2 transition">
+                            ✈️ Air Freight
+                        </button>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-2 py-2 rounded text-xs sm:text-sm font-bold flex items-center justify-center gap-1 w-1/2 transition">
+                            🚢 Sea Freight
+                        </button>
+                    </div>
+                </div>
 
-                <!-- Card 3: The World to Nigeria Image -->
-                <a href="#" class="block bg-white border border-gray-100 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 overflow-hidden group">
-                    <!-- Replace 'world-to-nigeria.png' with your actual image file -->
-                    <img src="world-to-nigeria.png" alt="The World to Nigeria" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500">
-                </a>
+                <!-- Nigeria to World Card Image -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 p-5 flex flex-col sm:col-span-2 lg:col-span-1 sm:w-1/2 lg:w-full sm:mx-auto lg:mx-0">
+                    <div class="flex-grow flex items-center justify-center mb-6">
+                        <img src="0 (1).png" alt="Nigeria to World Route" class="w-full h-auto max-h-40 object-contain rounded-xl">
+                    </div>
+                    <!-- Buttons Container -->
+                    <div class="flex flex-row gap-2 justify-center mt-auto w-full">
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded text-xs sm:text-sm font-bold flex items-center justify-center gap-1 w-3/4 transition">
+                            ✈️ Air Freight
+                        </button>
+                    </div>
+                </div>
 
             </div>
         </div>
