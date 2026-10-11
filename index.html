@@ -12,7 +12,7 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 900: '#14532d' }
+                        brand: { 50: '#f4f8f4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 900: '#14532d' }
                     }
                 }
             }
@@ -104,17 +104,10 @@
 
                 <!-- Right: Image Slider -->
                 <div class="w-[45%] md:w-1/2 relative h-40 sm:h-64 md:h-96 flex justify-center items-center">
-                    
                     <!-- HERO SLIDER IMAGES -->
-                    <!-- Image 1: Nigeria to World -->
                     <img src="IMG_5586.png" class="hero-slide drop-shadow-xl" alt="Nigeria to World Map Pin">
-                    
-                    <!-- Image 2: Nigeria to China -->
                     <img src="IMG_5591.png" class="hero-slide drop-shadow-xl" alt="Nigeria to China Map Pin">
-                    
-                    <!-- Image 3: Delivery Man / Logistics -->
                     <img src="IMG_5584.png" class="hero-slide drop-shadow-xl" alt="Logistics Delivery Man">
-                        
                 </div>
             </div>
         </div>
@@ -123,7 +116,6 @@
     <!-- ROUTING SECTION (Overlapping Single Card) -->
     <section class="relative z-20 -mt-16 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-white rounded-t-3xl md:rounded-3xl shadow-sm pt-10 pb-8">
-            
             <div class="text-center mb-8">
                 <h2 class="text-base md:text-xl font-extrabold text-gray-900 tracking-wider uppercase mb-1">WHERE ARE YOU SHIPPING FROM</h2>
                 <h3 class="text-gray-600 font-serif italic text-sm md:text-base">Choose your route to get started</h3>
@@ -131,10 +123,8 @@
             
             <!-- Centered Single Card -->
             <div class="max-w-lg mx-auto px-4 md:px-8">
-                
                 <div class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 p-5 flex flex-col">
                     <div class="flex-grow flex items-center justify-center mb-6">
-                        <!-- REPLACE "YOUR-IMAGE-HERE.png" WITH YOUR ACTUAL IMAGE NAME -->
                         <img src="IMG_5594.png" alt="Shipping Route" class="w-full h-auto max-h-40 object-contain rounded-xl">
                     </div>
                     <!-- Buttons Container -->
@@ -147,7 +137,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -164,76 +153,109 @@
         </div>
     </section>
 
-    <!-- OUR SERVICES -->
-    <section id="services" class="py-20 bg-gray-50">
+    <!-- OUR SERVICES (REDESIGNED TO MATCH SCREENSHOT) -->
+    <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-brand-600 font-bold tracking-wide uppercase mb-2">Our Core Services</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">End-to-End Global Logistics</h3>
-                <p class="text-gray-600 max-w-2xl mx-auto">We are focused on sectors that will boost the African economy and help businesses scale to the international market.</p>
+            
+            <!-- Section Header (Left aligned with underline) -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-brand-700 mb-4 tracking-tight">Our Services</h2>
+                <div class="w-32 h-1 bg-yellow-400 mt-2"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <!-- 5 Service Boxes Stack -->
+            <div class="space-y-16 md:space-y-24">
+                
+                <!-- Box 1: China Business Solutions -->
+                <div class="bg-brand-50 rounded-[2rem] p-4 md:p-8 flex flex-col md:flex-row items-center relative">
+                    <!-- Image Side -->
+                    <div class="w-full md:w-7/12 shrink-0">
+                        <img src="service-1.jpg" alt="China Business Solutions" class="w-full h-72 md:h-[400px] object-cover rounded-2xl">
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Expert Imports Clearing</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        We help with the importation of goods from all over the world at competitive prices. Specializing in RoRo/Containerized vehicles, industrial equipments, and general market items.
-                    </p>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <!-- Text Box -->
+                    <div class="w-full md:w-6/12 bg-white rounded-2xl shadow-xl p-8 md:p-10 relative md:-ml-16 mt-[-40px] md:mt-0 z-10">
+                        <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide uppercase mb-4">China Business Solutions</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Supplier verification, cost negotiations, Pre Shipment Inspections and more services will help you build a stress free and profitable business from China.
+                        </p>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition shadow-sm">
+                            CHECK OUT OUR CHINA SERVICES
+                        </button>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Ocean & Air Shipping</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        High volume, low cost, speedy ocean shipments and fast air cargo delivery. We handle everything from bulky commercial cargo to essential documents globally.
-                    </p>
                 </div>
-                <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+
+                <!-- Box 2: Expert Imports Clearing (Reversed Layout) -->
+                <div class="bg-brand-50 rounded-[2rem] p-4 md:p-8 flex flex-col md:flex-row-reverse items-center relative">
+                    <!-- Image Side -->
+                    <div class="w-full md:w-7/12 shrink-0">
+                        <img src="service-2.jpg" alt="Expert Imports Clearing" class="w-full h-72 md:h-[400px] object-cover rounded-2xl">
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Haulage and Warehousing</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        We offer good recommendations for haulages across the nation and safe warehousing for your goods and cargo.
-                    </p>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <!-- Text Box -->
+                    <div class="w-full md:w-6/12 bg-white rounded-2xl shadow-xl p-8 md:p-10 relative md:-mr-16 mt-[-40px] md:mt-0 z-10">
+                        <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide uppercase mb-4">Expert Imports Clearing</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            We help with the importation of goods from all over the world at competitive prices. Specializing in RoRo/Containerized vehicles, industrial equipments, and general market items.
+                        </p>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition shadow-sm">
+                            LEARN MORE ABOUT CLEARING
+                        </button>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Export & Documentation</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        Get your goods to anywhere in the world. We assist with registering your export business, obtaining required FDA/Export licenses and documentation, so you can export confidently without unnecessary delays.
-                    </p>
                 </div>
-                <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+
+                <!-- Box 3: Ocean & Air Shipping -->
+                <div class="bg-brand-50 rounded-[2rem] p-4 md:p-8 flex flex-col md:flex-row items-center relative">
+                    <!-- Image Side -->
+                    <div class="w-full md:w-7/12 shrink-0">
+                        <img src="service-3.jpg" alt="Ocean & Air Shipping" class="w-full h-72 md:h-[400px] object-cover rounded-2xl">
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Procurement & Sourcing</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        Source verified products and vehicles from China and the USA without travelling. We verify suppliers, inspect purchases, and ship safely to Nigeria, saving you up to 50% on personal or business car purchases.
-                    </p>
-                </div>
-                <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <!-- Text Box -->
+                    <div class="w-full md:w-6/12 bg-white rounded-2xl shadow-xl p-8 md:p-10 relative md:-ml-16 mt-[-40px] md:mt-0 z-10">
+                        <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide uppercase mb-4">Ocean & Air Shipping</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            High volume, low cost, speedy ocean shipments and fast air cargo delivery. We handle everything from bulky commercial cargo to essential documents globally.
+                        </p>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition shadow-sm">
+                            GET SHIPPING RATES
+                        </button>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">API & E-Commerce</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        Our simple API plug-in powers your global logistics business, allowing you to book, create and track shipments right from your own platform or e-commerce store.
-                    </p>
                 </div>
+
+                <!-- Box 4: Haulage and Warehousing (Reversed Layout) -->
+                <div class="bg-brand-50 rounded-[2rem] p-4 md:p-8 flex flex-col md:flex-row-reverse items-center relative">
+                    <!-- Image Side -->
+                    <div class="w-full md:w-7/12 shrink-0">
+                        <img src="service-4.jpg" alt="Haulage and Warehousing" class="w-full h-72 md:h-[400px] object-cover rounded-2xl">
+                    </div>
+                    <!-- Text Box -->
+                    <div class="w-full md:w-6/12 bg-white rounded-2xl shadow-xl p-8 md:p-10 relative md:-mr-16 mt-[-40px] md:mt-0 z-10">
+                        <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide uppercase mb-4">Haulage and Warehousing</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            We offer good recommendations for haulages across the nation and safe warehousing for your goods and cargo. We ensure your items are kept secure.
+                        </p>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition shadow-sm">
+                            BOOK WAREHOUSE SPACE
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Box 5: Export & Documentation -->
+                <div class="bg-brand-50 rounded-[2rem] p-4 md:p-8 flex flex-col md:flex-row items-center relative">
+                    <!-- Image Side -->
+                    <div class="w-full md:w-7/12 shrink-0">
+                        <img src="service-5.jpg" alt="Export & Documentation" class="w-full h-72 md:h-[400px] object-cover rounded-2xl">
+                    </div>
+                    <!-- Text Box -->
+                    <div class="w-full md:w-6/12 bg-white rounded-2xl shadow-xl p-8 md:p-10 relative md:-ml-16 mt-[-40px] md:mt-0 z-10">
+                        <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide uppercase mb-4">Export & Documentation</h3>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Get your goods to anywhere in the world. We assist with registering your export business, obtaining required FDA/Export licenses and documentation, so you can export confidently without unnecessary delays.
+                        </p>
+                        <button class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3.5 rounded-md font-bold text-sm uppercase tracking-wide transition shadow-sm">
+                            START EXPORTING
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
