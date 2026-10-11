@@ -40,68 +40,57 @@
         .hero-slide:nth-child(1) { animation-delay: 0s; }
         .hero-slide:nth-child(2) { animation-delay: 4s; }
         .hero-slide:nth-child(3) { animation-delay: 8s; }
+
+        /* Vertical Moving Circles Animation */
+        @keyframes floatVertical {
+            0% { transform: translateY(-20px); }
+            50% { transform: translateY(20px); }
+            100% { transform: translateY(-20px); }
+        }
+        .animate-float-vertical {
+            animation: floatVertical 4s ease-in-out infinite;
+        }
+        /* Staggered delays for the 3 circles */
+        .delay-1 { animation-delay: 0s; }
+        .delay-2 { animation-delay: 1.5s; }
+        .delay-3 { animation-delay: 3s; }
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased selection:bg-brand-500 selection:text-white bg-gray-50">
 
-    <!-- HEADER WRAPPER (Top Bar + Navigation) -->
-    <header class="fixed w-full z-50 transition-all shadow-sm">
-        
-        <!-- GET IN TOUCH & LICENSED TOP BAR -->
-        <div class="bg-brand-900 text-white py-2 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 md:gap-0">
-            <div class="flex items-center gap-4 text-xs sm:text-sm">
-                <span class="font-bold text-brand-400 tracking-wider">GET IN TOUCH:</span>
-                <a href="tel:+2348036166095" class="hover:text-white text-gray-200 transition flex items-center gap-1">
-                    📞 +234 803 616 6095
-                </a>
-                <a href="mailto:maimazanya@gmail.com" class="hidden md:flex hover:text-white text-gray-200 transition items-center gap-1">
-                    ✉️ maimazanya@gmail.com
-                </a>
-            </div>
-            <div>
-                <!-- LICENSED BADGE -->
-                <span class="bg-brand-600 text-white px-3 py-1 rounded-full font-bold text-[10px] sm:text-xs tracking-wider shadow-sm flex items-center gap-1.5 border border-brand-500">
-                    <svg class="w-3 h-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    LICENSED CLEARING AGENT
-                </span>
-            </div>
-        </div>
-
-        <!-- MAIN NAVIGATION -->
-        <nav class="bg-white border-b border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16 md:h-20">
-                    <div class="flex items-center gap-2 cursor-pointer">
-                        
-                        <!-- LOGO REPLACEMENT (Replace YOUR-LOGO.png with your actual file name) -->
-                        <img src="IMG_5606.png" alt="Mazanya Logo" class="h-10 md:h-12 w-auto object-contain">
-                        
-                        <div class="flex flex-col">
-                            <span class="font-extrabold text-lg md:text-xl leading-tight text-brand-700">MAZANYA</span>
-                            <span class="text-[10px] md:text-xs font-semibold text-brand-600 tracking-widest">MERCHANT LTD</span>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu Icon -->
-                    <div class="md:hidden flex items-center">
-                        <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </div>
-                    <!-- Desktop Nav -->
-                    <div class="hidden md:flex space-x-8">
-                        <a href="#services" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Our Services</a>
-                        <a href="#routing" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Shipping Routes</a>
-                        <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Contact Us</a>
-                    </div>
-                    <div class="hidden md:flex">
-                        <a href="#contact" class="bg-brand-700 hover:bg-brand-800 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition shadow-lg shadow-brand-500/30">Get A Quote</a>
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm transition-all border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <!-- LOGO AT THE TOP -->
+                    <img src="IMG_5606.png" alt="Mazanya Logo" class="h-10 md:h-12 w-auto object-contain">
+                    
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg md:text-xl leading-tight text-brand-700">MAZANYA</span>
+                        <span class="text-[10px] md:text-xs font-semibold text-brand-600 tracking-widest">MERCHANT LTD</span>
                     </div>
                 </div>
+                <!-- Mobile Menu Icon (Placeholder) -->
+                <div class="md:hidden flex items-center">
+                    <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#routing" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Who We Serve</a>
+                    <a href="#routing" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Shipping Routes</a>
+                    <a href="#services" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">Our Services</a>
+                    <a href="#advantage" class="text-sm font-semibold text-gray-600 hover:text-brand-600 transition">The Advantage</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-brand-700 hover:bg-brand-800 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition shadow-lg shadow-brand-500/30">Get A Quote</a>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- HERO SECTION -->
-    <!-- Increased top padding (pt-32 md:pt-40) to account for the taller header -->
-    <section id="home" class="relative pt-32 md:pt-40 pb-24 lg:pb-32 overflow-hidden bg-white">
+    <section id="home" class="relative pt-20 md:pt-32 pb-24 lg:pb-32 overflow-hidden bg-white">
         
         <!-- Faint Whitish Map Background -->
         <div class="absolute inset-0 z-0 opacity-20 grayscale pointer-events-none" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
@@ -123,9 +112,8 @@
                         Custom Licensed Clearing & Freight Forwarding Agent in Nigeria. Efficient custom clearance, cargo delivery, and end-to-end logistics handled professionally.
                     </p>
                     <div>
-                        <!-- Updated Hero Button -->
-                        <a href="#services" class="inline-block bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 md:px-8 md:py-3.5 rounded-md md:rounded-full font-bold text-sm md:text-lg transition shadow-lg shadow-brand-500/30 text-center">
-                            Our Services
+                        <a href="#routing" class="inline-block bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 md:px-8 md:py-3.5 rounded-md md:rounded-full font-bold text-sm md:text-lg transition shadow-lg shadow-brand-500/30 text-center">
+                            Track My Shipment
                         </a>
                     </div>
                 </div>
@@ -142,7 +130,7 @@
     </section>
 
     <!-- ROUTING SECTION (Overlapping Single Card) -->
-    <section id="routing" class="relative z-20 -mt-16 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section class="relative z-20 -mt-16 md:-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-white rounded-t-3xl md:rounded-3xl shadow-sm pt-10 pb-8">
             <div class="text-center mb-8">
                 <h2 class="text-base md:text-xl font-extrabold text-gray-900 tracking-wider uppercase mb-1">WHERE ARE YOU SHIPPING FROM</h2>
@@ -169,15 +157,36 @@
         </div>
     </section>
 
-    <!-- VERTICAL MOVING CIRCULAR ELEMENT (Replaced "Who We Serve") -->
-    <section class="py-12 bg-white relative z-20 flex justify-center items-center">
-        <a href="#services" class="w-16 h-16 rounded-full bg-brand-50 border-2 border-brand-500 flex items-center justify-center text-brand-600 animate-bounce hover:bg-brand-100 hover:text-brand-700 transition-colors shadow-lg cursor-pointer">
-            <!-- Downward pointing arrow inside the bouncing circle -->
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-        </a>
+    <!-- LICENSED BY SECTION (Replaces "Who We Serve") -->
+    <section class="py-20 bg-gray-50 relative z-20 overflow-hidden border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h4 class="text-2xl md:text-3xl font-extrabold text-brand-700 mb-12 uppercase tracking-tight">Licensed & Regulated By</h4>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 py-8">
+                <!-- Circle 1 -->
+                <div class="animate-float-vertical delay-1 w-40 h-40 md:w-48 md:h-48 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center overflow-hidden p-4">
+                    <!-- Replace with your actual license image -->
+                    <img src="license-1.png" alt="License 1" class="w-full h-full object-contain rounded-full">
+                </div>
+
+                <!-- Circle 2 -->
+                <div class="animate-float-vertical delay-2 w-40 h-40 md:w-48 md:h-48 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center overflow-hidden p-4">
+                    <!-- Replace with your actual license image -->
+                    <img src="license-2.png" alt="License 2" class="w-full h-full object-contain rounded-full">
+                </div>
+
+                <!-- Circle 3 -->
+                <div class="animate-float-vertical delay-3 w-40 h-40 md:w-48 md:h-48 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center overflow-hidden p-4">
+                    <!-- Replace with your actual license image -->
+                    <img src="license-3.png" alt="License 3" class="w-full h-full object-contain rounded-full">
+                </div>
+            </div>
+            
+        </div>
     </section>
 
-    <!-- OUR SERVICES -->
+    <!-- OUR SERVICES (REDESIGNED TO MATCH SCREENSHOT) -->
     <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -187,7 +196,7 @@
                 <div class="w-32 h-1 bg-yellow-400 mt-2"></div>
             </div>
 
-            <!-- Service Boxes Stack -->
+            <!-- 5 Service Boxes Stack -->
             <div class="space-y-16 md:space-y-24">
                 
                 <!-- Box 1: Customs Clearance -->
@@ -272,7 +281,9 @@
                 <!-- Brand & Hours -->
                 <div>
                     <div class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">M</div>
+                        <!-- LOGO AT THE BOTTOM -->
+                        <img src="IMG_5606.png" alt="Mazanya Logo" class="h-10 md:h-12 w-auto object-contain">
+                        
                         <span class="font-extrabold text-xl text-white tracking-tight">MAZANYA MERCHANT LTD</span>
                     </div>
                     <p class="text-sm text-gray-400 mb-6 leading-relaxed">
